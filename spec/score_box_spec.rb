@@ -16,6 +16,7 @@ describe ScoreBox do
   end
 
   it "counts the dice its supposed to count" do
-    skip
+    score_box = ScoreBox.new('twos',2)
+    score_box.count_dice([2,2,2,4,6]).must_equal 3
   end
 end

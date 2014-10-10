@@ -23,7 +23,7 @@ class ScoreCard
   end
 
   def total_score
-    scored_boxes.map(&:score).reduce(0) {|total, score| total -= score}
+    scored_boxes.map(&:score).reduce(0) {|total, score| total += score}
   end
 
   def to_s

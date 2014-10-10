@@ -10,10 +10,12 @@ describe ScoreCard do
   end
 
   it "has 6 score boxes" do
-    skip
+    score_card = ScoreCard.new
+    score_card.score_boxes.count.must_equal 6
   end
 
   it "starts without any of its boxes scored" do
-    skip
+    score_card = ScoreCard.new
+    score_card.scored_boxes.count.must_equal 0
   end
 end

@@ -4,7 +4,7 @@ class Game
   attr_reader :players
 
   def initialize(player_names)
-    player_names = player_names.split(',').first(2)
+    player_names = player_names.split(',').map(&:strip)
     raise ArgumentError, "Game requires at least 2 players" unless player_names.length >= 2
     raise ArgumentError, "Player names must be unique" unless player_names.uniq.length == player_names.length
     @players = player_names.map do |name|

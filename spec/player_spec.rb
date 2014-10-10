@@ -9,15 +9,19 @@ describe Player do
   end
 
   it "remembers the name its given" do
-    skip
+    player = Player.new('Test Player')
+    player.name.must_equal 'Test Player'
   end
 
   it "has a score card" do
-    skip
+    player = Player.new('Test Player')
+    player.score_card.must_be_instance_of ScoreCard
   end
 
   it "rolls 5 dice on her turn" do
-    skip
+    player = Player.new('Test Player')
+    player.roll_dice
+    player.dice.count.must_equal 5
   end
 
   it "rolls a 6-sided die" do

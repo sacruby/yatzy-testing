@@ -6,7 +6,7 @@ class ScoreBox
 
   def initialize(name, die_to_count)
     @name = name
-    @dice = ['-','-','-','-','-','--']
+    @dice = ['-','-','-','-','-','-']
     @score = -1
     @die_to_count = die_to_count
   end
